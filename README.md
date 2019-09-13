@@ -5,5 +5,5 @@
 We're a team of professionals that compile work on this central parking site. 
 ## We have fun here
 Rules: don't break anything, especially other's code. 
-## Relax, take a load off, and enjoy the bonus content we decided to partake in.
+## Relax, take a load off, and enjoy our bonus content.
 This is a lab pod. Our lab pod.
