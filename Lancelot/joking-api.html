@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Joking Quote</title>
+    <style>
+        #center {
+            text-align: center;
+        }
+    </style>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script  type="text/javascript">
+        function getJokeFromUrl(url, isJoke) {
+            $.ajax({
+                type: "GET",
+                url: url,
+                cache: false,
+                success: function (data) {
+                    let joke = isJoke ? data["value"]["joke"] : data['quote'];
+                    document.getElementById("joke-text").innerHTML=joke;
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+<span id="center">
+    <div>
+        <button onclick="getJokeFromUrl('http://api.icndb.com/jokes/random', true);">Chuck Norris Jokes</button>
+        <button onclick="getJokeFromUrl('http://quotes.stormconsultancy.co.uk/quotes/1.json', false )"> Programming Quotes</button>
+        <br/>
+        <h1 id="joke-text"></h1>
+    </div>
+</span>
+</body>
+</html>
