@@ -178,12 +178,23 @@
             return petData.name.length;
         });
 
-        console.log(nameLengthPugs);
+        // console.log(nameLengthPugs);
 
 
         // PROBLEM 7 - create a function getFemaleFamilyMembers() that when given the family variable as an argument,
         // returns an array of female family member names
 
+        let femaleMembers = family.filter(member => member.gender === "female");
+
+        console.log(femaleMembers);
+
+        //RETURNS UNDEFINED
+
+        function getFemaleFamilyMembers(familyArray) {
+            familyArray.filter(member => member.gender === "female");
+        }
+
+        console.log(getFemaleFamilyMembers(family));
         // PROBLEM 8 - create a function makeLongPetString() that when given the variable of pets,
         // returns a string of all property values with dashes separating each property value
 
